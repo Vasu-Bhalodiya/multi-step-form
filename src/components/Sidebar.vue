@@ -13,14 +13,16 @@
   </template>
   
   <script>
+import UserDetails from './UserDetails.vue';
+
   export default {
     props: {
       currentStep: Number
     },
     data() {
       return {
-        steps: [1, 2, 3, 4],
-        stepTitles: ['Personal Information', 'Education', 'Work Experiences', 'User Photo']
+        steps: [1, 2, 3, 4,5],
+        stepTitles: ['Personal Information', 'Education', 'Work Experiences', 'User Photo','User Details']
       };
     },
     methods: {

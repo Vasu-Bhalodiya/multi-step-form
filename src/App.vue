@@ -14,6 +14,9 @@
       <div v-if="currentStep === 4">
         <ProfileImage ref="step4" :data="formData" @update="updateFormData" />
       </div>
+      <div v-if="currentStep === 5">
+        <UserDetails ref="step5" :data="formData" @update="updateFormData" />
+      </div>
 
       <div class="flex justify-between mt-4">
         <button
@@ -51,6 +54,7 @@ import PersonalInformation from "./components/PersonalInformation.vue";
 import Education from "./components/Education.vue";
 import Experience from "./components/Experience.vue";
 import ProfileImage from "./components/ProfileImage.vue";
+import UserDetails from "./components/UserDetails.vue";
 
 export default {
   components: {
@@ -59,11 +63,12 @@ export default {
     Education,
     Experience,
     ProfileImage,
+    UserDetails,
   },
   data() {
     return {
       currentStep: 1,
-      steps: [1, 2, 3, 4],
+      steps: [1, 2, 3, 4,5],
       formData: {
         firstName: "",
         lastName: "",
